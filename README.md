@@ -1,6 +1,6 @@
-#Toga Frontend
+# Toga Frontend
 
-## This is our main website that provides info on what we offer and also acts as a forum to ask and get your questions tended to.
+## This is our main website that provides info on what we offer and also acts as a forum to ask and get your questions tended to
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
