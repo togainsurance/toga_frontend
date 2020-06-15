@@ -1,8 +1,13 @@
 import React from "react";
-import Header from "./components/Header/index";
+import Footer from "./components/Footer";
+// import Header from "./components/Header";
 
 const App = () => {
-  return <div className="container"></div>;
+  return (
+    <div className="container">
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
