@@ -1,17 +1,12 @@
 import React from "react";
+import Logo from "../Logo";
 import "./Header.css";
 
 const Header = () => {
   return (
     <header className="header-container">
       <div className="header">
-        <div className="logo">
-          <img
-            src="https://res.cloudinary.com/toga-insure/image/upload/v1589798290/CommingSoonPage/TogaLogo_2x_xhi9a1.png"
-            alt="logo"
-          />
-          Toga
-        </div>
+        <Logo />
         <div>
           <ul className="header-items">
             <li className="header-item">Claims</li>
