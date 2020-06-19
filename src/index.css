@@ -1,12 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e5e5e5;
+  background: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
 }
 
 code {
@@ -14,12 +25,24 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .btn {
   background: #6b1587;
   color: #ffffff;
   border: 2px solid #6b1587;
   font-size: 18px;
-  padding: 5px;
+  padding: 10px;
   font-weight: 700;
-  text-transform: capitalize;
+  border-radius: 21px;
+}
+
+@media only screen and (max-width: 756px) {
+  .btn {
+    font-size: 14px;
+    padding: 7px;
+  }
 }

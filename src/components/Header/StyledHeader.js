@@ -1,7 +1,8 @@
-.header-container {
+import Styled from "styled-components";
+
+const StyledHeader = Styled.header`
   position: relative;
   margin: 0;
-}
 
 .header {
   width: 90%;
@@ -20,6 +21,9 @@
   list-style: none;
   font-size: 21px;
   font-weight: 500;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .header-line {
@@ -43,3 +47,7 @@
     top: 100%;
   }
 }
+
+`;
+
+export default StyledHeader;

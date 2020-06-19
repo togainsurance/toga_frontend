@@ -1,10 +1,10 @@
 import React from "react";
-import "./Footer.css";
+import FooterStyle from "./FooterStyles";
 import Logo from "../Logo";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <FooterStyle>
       <div className="footer-top">
         <form className="footer-top__left">
           <h2 className="footer-top__left-title">Message us, let’s talk</h2>
@@ -45,7 +45,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>Toga Micro-Insurance, 2020.</p>
       </div>
-    </footer>
+    </FooterStyle>
   );
 };
 

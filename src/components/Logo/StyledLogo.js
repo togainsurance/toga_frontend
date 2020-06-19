@@ -1,6 +1,8 @@
-.logo {
+import Styled from "styled-components";
+
+const Logo = Styled.div`
   color: #6b1587;
-  font-family: Roboto;
+  font-family: Roboto, "san-serif";
   font-style: bold;
   font-weight: 500;
   font-size: 36px;
@@ -8,9 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo img {
+  img {
   display: inline-block;
   width: 50px;
   height: 53px;
@@ -18,13 +18,14 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .logo {
     font-size: 24px;
     line-height: 30px;
-  }
 
-  .logo img {
+ img {
     width: 40px;
     height: 43px;
   }
 }
+`;
+
+export default Logo;
