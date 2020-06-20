@@ -1,27 +1,34 @@
-.footer {
+import Styled from "styled-components";
+
+const FooterStyle = Styled.footer`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  padding: 30px;
+  padding: 20px 20px 5px 20px;
   background: #f7f7f7;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 5%;
-}
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+  }
 
 .footer-middle,
 .footer-top,
 .footer-bottom {
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 856px) {
+    width: 95%;
+    font-size: 10px;
+  }
 }
 
 .footer-top__left {
   min-width: 514px;
   box-sizing: border-box;
+  @media only screen and (max-width: 856px) {
+    min-width: 40%;
+  }
 }
 
 .footer-top__right {
@@ -36,6 +43,10 @@
   margin-bottom: 20px;
   padding: 10px 15px;
   resize: none;
+  @media only screen and (max-width: 856px) {
+    height: 70px;
+    width: 70%;
+  }
 }
 
 .footer-top__left .msg-body,
@@ -45,10 +56,22 @@
   outline: none;
 }
 
+.footer-top__left__bottom input,
+.footer-top__left__bottom button {
+  @media only screen and (max-width: 856px) {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
 .footer-top__left__bottom {
   display: flex;
   justify-items: space-between;
   margin-top: 5px;
+  @media only screen and (max-width: 856px) {
+    display: block;
+  }
 }
 
 .footer-top__left__bottom input {
@@ -75,6 +98,9 @@
   font-size: 16px;
   font-weight: 500;
   padding-bottom: 10px;
+  @media only screen and (max-width: 856px) {
+    font-size: 10px;
+  }
 }
 
 .footer-line {
@@ -82,30 +108,6 @@
   width: 95%;
   margin: 10px auto;
 }
+`;
 
-@media only screen and (max-width: 856px) {
-  .footer-top__left {
-    min-width: 70%;
-  }
-
-  .footer-item {
-    font-size: 10px;
-  }
-
-  .footer-middle,
-  .footer-top,
-  .footer-bottom {
-    width: 95%;
-    font-size: 10px;
-  }
-  .footer-top__left__bottom {
-    display: block;
-  }
-
-  .footer-top__left__bottom input,
-  .footer-top__left__bottom button {
-    width: 95%;
-    display: block;
-    margin-bottom: 10px;
-  }
-}
+export default FooterStyle;
