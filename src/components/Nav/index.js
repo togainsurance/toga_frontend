@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import StyledNav from "./StyledNav";
 
 const Nav = ({ onClick, open }) => {
@@ -8,7 +9,9 @@ const Nav = ({ onClick, open }) => {
         X
       </div>
       <ul>
-        <li>Device Insurance</li>
+        <li>
+          <Link to="/device">Device Insurance</Link>
+        </li>
         <hr />
         <li>Malaria Insurance</li>
         <hr />
