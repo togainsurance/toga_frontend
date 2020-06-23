@@ -75,10 +75,10 @@ const HomePage = () => {
             alt="Card 3"
           />
           <div className="description">
-            <h2>Basic Life Insurance</h2>
+            <h2>Malaria Insurance Plan</h2>
             <p>
-              Get hospitalization and life benefits whenever an accident or
-              health challenge occurs.
+              Receive testing treatment and after-care for malaria without any
+              extra cost.
               <a href="" className="card-link">
                 Find out more
               </a>
@@ -87,10 +87,10 @@ const HomePage = () => {
         </div>
         <div className="right-card card">
           <div className="description">
-            <h2>Malaria Insurance Plan</h2>
+            <h2>Basic Life Insurance</h2>
             <p>
-              Receive testing treatment and after-care for malaria without any
-              extra cost.
+              Get hospitalization and life benefits whenever an accident or
+              health challenge occurs.
               <a href="" className="card-link">
                 Find out more
               </a>
