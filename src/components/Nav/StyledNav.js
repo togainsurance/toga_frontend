@@ -14,12 +14,18 @@ const StyledNav = Styled.nav`
   transform: translateX(100%);
   transition: all 0.3s;
   ${(props) => props.open && `transform: translateX(0);`};
+  .mobile-only{
+    display: none;
+  }
   @media only screen and (max-width: 756px) {
     width: 50%;
     padding: 10px;
     min-height: 100%;
+    .mobile-only{
+      display: block;
+    }
   }
-}
+  
   .closeButton {
     font-weight: 900;
     &:hover {
@@ -39,6 +45,7 @@ const StyledNav = Styled.nav`
       }
     }
   }
+  
 `;
 
 export default StyledNav;
