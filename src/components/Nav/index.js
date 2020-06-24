@@ -9,11 +9,17 @@ const Nav = ({ onClick, open }) => {
         X
       </div>
       <ul>
+        <li className="header-item mobile-only">Claims</li>
+        <hr className="mobile-only" />
+        <li className="header-item mobile-only">Request Service</li>
+        <hr className="mobile-only" />
         <li>
           <Link to="/device">Device Insurance</Link>
         </li>
         <hr />
-        <li>Malaria Insurance</li>
+        <li>
+          <Link to="/malaria">Malaria Insurance</Link>
+        </li>
         <hr />
         <li>Basic Life Insurance</li>
         <hr />

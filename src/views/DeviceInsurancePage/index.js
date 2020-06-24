@@ -1,5 +1,7 @@
 import React from "react";
-import StyledDevicePage, { PaymentPlanStyle } from "./Style";
+import StyledDevicePage from "./Style";
+import { Link } from "react-router-dom";
+import { PaymentPlanStyle, StyledQuestionSection } from "../commonStyle";
 
 const DeviceInsurance = () => {
   return (
@@ -159,6 +161,24 @@ const DeviceInsurance = () => {
           </tbody>
         </table>
       </PaymentPlanStyle>
+      <StyledQuestionSection className="questions">
+        <h2>Some Questions & Answers</h2>
+        <div className="content-container">
+          <div>
+            <h3>We understand, you’re busy.</h3>
+            <p>
+              We’ll cover you instantly once your payment is complete. No
+              waiting period, no shenanigans.
+            </p>
+            <p>Simply get answers from the mostly asked questions.</p>
+            <Link className="btn2">Get Started</Link>
+          </div>
+          <img
+            src="https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png"
+            alt="curious Happy customer"
+          />
+        </div>
+      </StyledQuestionSection>
     </StyledDevicePage>
   );
 };

@@ -14,8 +14,8 @@ const Header = () => {
         <Logo />
         <div>
           <ul className="header-items">
-            <li className="header-item">Claims</li>
-            <li className="header-item">Request Service</li>
+            <li className="header-item desktop-only">Claims</li>
+            <li className="header-item desktop-only">Request Service</li>
             <li className="header-item" onClick={updateIsOpenState}>
               <svg
                 width="31"

@@ -13,7 +13,7 @@ const StyledDevicePage = Styled.div`
       font-size: 12px;
     }
     img {
-      width: 100%;
+      width: 80%;
       @media only screen and (max-width: 756px) {
         width: 60%;
       }
@@ -31,9 +31,10 @@ const StyledDevicePage = Styled.div`
   }
   .insurance-info {
     width: 100%;
-    margin: 50px 0;
+    margin: 100px 0;
     h3 {
-      margin-left: 50px;
+      margin-left: 20px;
+      font-size: 24px;
       @media only screen and (max-width: 756px) {
         font-size: 14px;
         margin-left: 10px;
@@ -54,59 +55,13 @@ const StyledDevicePage = Styled.div`
   }
   .middle-section {
     width: 60%;
-    margin: 30px auto;
+    margin: 70px auto;
     text-align: center;
     @media only screen and (max-width: 756px) {
       font-size: 12px;
       width: 90%;
     }
   }
-`;
-
-export const PaymentPlanStyle = Styled.section`
-
-    width: 90%;
-    margin: 30px auto;
-    @media only screen and (max-width: 756px) {
-      width: 100%;
-    }
-    h2 {
-      text-align: center;
-      @media only screen and (max-width: 756px) {
-        font-size: 18px;
-      }
-    }
-    table {
-      border: 1px solid #c4c4c4;
-      background: #f7f7f7;
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto;
-      overflow-X: scroll;
-      tr {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 0;
-        width: 100%;
-        th,td {
-          border: 1px solid #c4c4c4;
-          display: inline;
-          width: 100%;
-          height: 40px;
-          align-self: end;
-          justify-self: start;
-          padding: 20px 0;
-          text-align: center;
-          @media only screen and (max-width: 756px) {
-            font-size: 12px;
-            padding: 10px 0;
-          }
-        }
-        th {
-          color: #6b1587;
-        }
-      }
-    }
 `;
 
 export default StyledDevicePage;

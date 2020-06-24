@@ -3,18 +3,24 @@ import Styled from "styled-components";
 const StyledHeader = Styled.header`
   position: relative;
   margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  /* border: 1px solid red; */
 
 .header {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 10% 50%;
+  grid-column-gap: 65%;
   margin: 15px auto;
 }
 
 .header-items {
   display: flex;
-  width: 100%;
+  width: 50%;
   justify-content: space-between;
+  box-sizing: border-box;
+  justify-self: end;
 }
 
 .header-item {
@@ -36,6 +42,16 @@ const StyledHeader = Styled.header`
 }
 
 @media only screen and (max-width: 756px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-items {
+    width: 98%;
+    justify-content: space-between;
+    justify-self: end;
+  }
   .header-item {
     font-size: 12px;
     font-weight: 500;
@@ -45,6 +61,9 @@ const StyledHeader = Styled.header`
     width: 74%;
     left: 18%;
     top: 100%;
+  }
+  .desktop-only{
+    display: none;
   }
 }
 
