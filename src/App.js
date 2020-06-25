@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import HomePage from "./views/HomePage";
 import DeviceInsurancePage from "./views/DeviceInsurancePage";
 import MalariaInsurancePage from "./views/MalariaInsurancePage";
+import LifeInsurancePage from "./views/LifeInsurancePage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" exact component={HomePage} />
         <Route path="/device" component={DeviceInsurancePage} />
         <Route path="/malaria" component={MalariaInsurancePage} />
+        <Route path="/basic-life" component={LifeInsurancePage} />
       </Switch>
       <Footer />
     </Router>

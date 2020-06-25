@@ -18,7 +18,7 @@ const StyledNav = Styled.nav`
     display: none;
   }
   @media only screen and (max-width: 756px) {
-    width: 50%;
+    width: 60%;
     padding: 10px;
     min-height: 100%;
     .mobile-only{

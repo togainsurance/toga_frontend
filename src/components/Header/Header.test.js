@@ -10,6 +10,4 @@ test("renders default header elements", () => {
     </Router>
   );
   expect(getByText("Toga")).toBeInTheDocument();
-  expect(getByText("Claims")).toBeInTheDocument();
-  expect(getByText("Request Service")).toBeInTheDocument();
 });

@@ -21,7 +21,9 @@ const Nav = ({ onClick, open }) => {
           <Link to="/malaria">Malaria Insurance</Link>
         </li>
         <hr />
-        <li>Basic Life Insurance</li>
+        <li>
+          <Link to="/basic-life">Basic Life Insurance</Link>
+        </li>
         <hr />
         <li>Refer a friend</li>
         <hr />
