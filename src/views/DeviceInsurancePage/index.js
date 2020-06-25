@@ -1,6 +1,5 @@
 import React from "react";
 import StyledDevicePage from "./Style";
-import { Link } from "react-router-dom";
 import { PaymentPlanStyle, StyledQuestionSection } from "../commonStyle";
 
 const DeviceInsurance = () => {
@@ -171,7 +170,7 @@ const DeviceInsurance = () => {
               waiting period, no shenanigans.
             </p>
             <p>Simply get answers from the mostly asked questions.</p>
-            <Link className="btn2">Get Started</Link>
+            <a className="btn2">Get Started</a>
           </div>
           <img
             src="https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png"
