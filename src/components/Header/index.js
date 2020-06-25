@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../Logo";
+import { Link } from "react-router-dom";
 import StyledHeader from "./StyledHeader";
 import Nav from "../Nav";
 
@@ -14,8 +15,12 @@ const Header = () => {
         <Logo />
         <div>
           <ul className="header-items">
-            <li className="header-item desktop-only">Claims</li>
-            <li className="header-item desktop-only">Request Service</li>
+            <li className="header-item desktop-only">
+              <Link to="/not-available">Claims</Link>
+            </li>
+            <li className="header-item desktop-only">
+              <Link to="/not-available">Request Service</Link>
+            </li>
             <li className="header-item" onClick={updateIsOpenState}>
               <svg
                 width="31"

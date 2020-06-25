@@ -6,6 +6,8 @@ import HomePage from "./views/HomePage";
 import DeviceInsurancePage from "./views/DeviceInsurancePage";
 import MalariaInsurancePage from "./views/MalariaInsurancePage";
 import LifeInsurancePage from "./views/LifeInsurancePage";
+import ReferralPage from "./views/ReferralPage";
+import ComingSoonPage from "./views/ComingSoonPage";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/device" component={DeviceInsurancePage} />
         <Route path="/malaria" component={MalariaInsurancePage} />
         <Route path="/basic-life" component={LifeInsurancePage} />
+        <Route path="/referral" component={ReferralPage} />
+        <Route path="/not-available" component={ComingSoonPage} />
       </Switch>
       <Footer />
     </Router>

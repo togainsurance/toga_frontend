@@ -9,9 +9,13 @@ const Nav = ({ onClick, open }) => {
         X
       </div>
       <ul>
-        <li className="header-item mobile-only">Claims</li>
+        <li className="header-item mobile-only">
+          <Link to="/not-available">Claims</Link>
+        </li>
         <hr className="mobile-only" />
-        <li className="header-item mobile-only">Request Service</li>
+        <li className="header-item mobile-only">
+          <Link to="/not-available">Request Service</Link>
+        </li>
         <hr className="mobile-only" />
         <li>
           <Link to="/device">Device Insurance</Link>
@@ -25,9 +29,13 @@ const Nav = ({ onClick, open }) => {
           <Link to="/basic-life">Basic Life Insurance</Link>
         </li>
         <hr />
-        <li>Refer a friend</li>
+        <li>
+          <Link to="/referral">Refer a friend</Link>
+        </li>
         <hr />
-        <li>Help Center</li>
+        <li>
+          <Link to="/not-available">Help Center</Link>
+        </li>
       </ul>
     </StyledNav>
   );
