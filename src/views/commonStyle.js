@@ -101,3 +101,60 @@ export const StyledQuestionSection = Styled.section`
 
   }
 `;
+
+export const HowItWorksStyle = Styled.section`
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  background: #f7f7f7;
+  margin: 50px auto;
+  
+  h2 {
+  text-align: center;
+  font-size: 32px;
+  margin: 30px auto;
+  line-height: 34px;
+    @media only screen and (max-width: 756px) {
+      font-size: 18px;
+      line-height: 20px;
+      margin: 15px auto;
+    }
+  }
+
+  .sub-section-wrapper {
+    width: 90%;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-between;
+    @media only screen and (max-width: 756px) {
+      width: 100%;
+    }
+    .sub-section {
+      display: grid;
+      grid-template-columns: auto;
+      max-width: 20%;
+      text-align: center;
+      font-size: 18px;
+      @media only screen and (max-width: 756px) {
+        max-width: 30%;
+        font-size: 12px;
+        padding: 5px;
+      }
+      img {
+        justify-self: center;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 756px) {
+          width: 70px;
+          height: 70px;
+        } 
+      }
+      h2 {
+        font-size: 24px;
+        @media only screen and (max-width: 756px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+`;

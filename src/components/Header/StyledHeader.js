@@ -33,11 +33,11 @@ const StyledHeader = Styled.header`
 }
 
 .header-line {
-  width: 85%;
+  width: 90%;
   margin: auto;
   border: 1px solid #a3a3a3;
   position: absolute;
-  left: 9.8%;
+  left: 5%;
   top: 100%;
 }
 

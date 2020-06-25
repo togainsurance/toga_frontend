@@ -15,7 +15,7 @@ const CarouselComponent = () => {
     >
       <div
         key="slide1"
-        style={{ padding: 30, height: 300 }}
+        style={{ padding: 10, height: 300 }}
         className="carousel-container"
       >
         <div className="carousel-item">
@@ -28,9 +28,12 @@ const CarouselComponent = () => {
           </p>
         </div>
         <div className="carousel-item">
-          <h3>Insured</h3>
+          <h3>Claims</h3>
           <hr />
-          <p>The person(s) covered by the insurance policy.</p>
+          <p>
+            A claim is a request by an insurance-plan or policy holder to an
+            insurance company for compensation for a covered loss or event.
+          </p>
         </div>
       </div>
       <div
@@ -39,13 +42,9 @@ const CarouselComponent = () => {
         className="carousel-container"
       >
         <div className="carousel-item">
-          <h3>Deductible</h3>
+          <h3>Insurance ID</h3>
           <hr />
-          <p>
-            The annual amount of money that you must pay out of pocket for
-            medical expenses before your insurance kicks in and starts to make
-            payments
-          </p>
+          <p>This is a unique number that comes with each insurance plan.</p>
         </div>
         <div className="carousel-item">
           <h3>Benefit</h3>
@@ -62,22 +61,17 @@ const CarouselComponent = () => {
         className="carousel-container"
       >
         <div className="carousel-item">
-          <h3>Premiums</h3>
+          <h3>Premium</h3>
           <hr />
           <p>
-            The monthly or annual amount that you must pay in order to have the
-            insurance coverage.
+            This is the recurring fee paid for an insurance plan either monthly,
+            yearly or bi-anually.
           </p>
         </div>
         <div className="carousel-item">
-          <h3>Co-payment</h3>
+          <h3>Policy Number</h3>
           <hr />
-          <p>
-            A flat fee that you must pay toward the cost of medical visits, your
-            insurance provider pays the remaining balance. For example, you
-            could be responsible for a ₦2,000 co-pay for each visit to the
-            doctor.
-          </p>
+          <p>This is a unique number that comes with each insurance plan.</p>
         </div>
       </div>
     </Carousel>

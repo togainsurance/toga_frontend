@@ -1,6 +1,8 @@
 import React from "react";
 import StyledHomePage from "./StyledHomePage";
 import Carousel from "../../components/Carousel";
+import { Link } from "react-router-dom";
+import { HowItWorksStyle } from "../commonStyle";
 
 const HomePage = () => {
   return (
@@ -24,16 +26,20 @@ const HomePage = () => {
           <div className="mobile-app-link">
             Available
             <div className="appstore-img">
-              <img
-                src="https://res.cloudinary.com/toga-insure/image/upload/v1592250120/CommingSoonPage/appleStore_thn5jy.png"
-                alt="Apple App Store"
-                className="apple"
-              />
-              <img
-                src="https://res.cloudinary.com/toga-insure/image/upload/v1592307417/CommingSoonPage/googleStore_lhe8fy.png"
-                alt="Android App Store"
-                className="android"
-              />
+              <Link to="/not-available">
+                <img
+                  src="https://res.cloudinary.com/toga-insure/image/upload/v1592250120/CommingSoonPage/appleStore_thn5jy.png"
+                  alt="Apple App Store"
+                  className="apple"
+                />
+              </Link>
+              <Link to="/not-available">
+                <img
+                  src="https://res.cloudinary.com/toga-insure/image/upload/v1592307417/CommingSoonPage/googleStore_lhe8fy.png"
+                  alt="Android App Store"
+                  className="android"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -58,10 +64,10 @@ const HomePage = () => {
             <h2>Device Insurance</h2>
             <p>
               Get protection for your mobile phones, computers, tablets and
-              iPads.
-              <a href="" className="card-link">
+              iPads.{" "}
+              <Link className="more" to="/device">
                 Find out more
-              </a>
+              </Link>
             </p>
           </div>
           <img
@@ -78,10 +84,10 @@ const HomePage = () => {
             <h2>Malaria Insurance Plan</h2>
             <p>
               Receive testing treatment and after-care for malaria without any
-              extra cost.
-              <a href="" className="card-link">
+              extra cost.{" "}
+              <Link className="more" to="/malaria">
                 Find out more
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -90,10 +96,10 @@ const HomePage = () => {
             <h2>Basic Life Insurance</h2>
             <p>
               Get hospitalization and life benefits whenever an accident or
-              health challenge occurs.
-              <a href="" className="card-link">
+              health challenge occurs.{" "}
+              <Link className="more" to="/basic-life">
                 Find out more
-              </a>
+              </Link>
             </p>
           </div>
           <img
@@ -102,7 +108,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <section className="how-it-works">
+      <HowItWorksStyle>
         <h2>How it works</h2>
         <div className="sub-section-wrapper">
           <div className="sub-section">
@@ -139,7 +145,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-      </section>
+      </HowItWorksStyle>
       <div className="bottom-section">
         <div className="card2">
           <img
@@ -148,7 +154,9 @@ const HomePage = () => {
           />
           <div className="card2-content">
             <p>Tell us how we can help</p>
-            <button className="btn">Make a claim</button>
+            <Link to="/not-available" className="btn">
+              Make a claim
+            </Link>
           </div>
         </div>
         <div className="card2">
@@ -160,7 +168,9 @@ const HomePage = () => {
             <p>
               Request a repair of purchase of a device from guaranteed services
             </p>
-            <button className="btn">Request a service</button>
+            <Link className="btn" to="/not-available">
+              Request a service
+            </Link>
           </div>
         </div>
       </div>

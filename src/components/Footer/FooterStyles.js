@@ -10,6 +10,9 @@ const FooterStyle = Styled.footer`
     display: flex;
     justify-content: space-between;
     padding-right: 5%;
+    @media only screen and (max-width: 856px) {
+      padding-right: 2%;
+    }
   }
 
 .footer-middle,
@@ -27,7 +30,7 @@ const FooterStyle = Styled.footer`
   min-width: 514px;
   box-sizing: border-box;
   @media only screen and (max-width: 856px) {
-    min-width: 40%;
+    min-width: 30%;
   }
 }
 
@@ -44,7 +47,7 @@ const FooterStyle = Styled.footer`
   padding: 10px 15px;
   resize: none;
   @media only screen and (max-width: 856px) {
-    height: 70px;
+    height: 60px;
     width: 70%;
   }
 }
