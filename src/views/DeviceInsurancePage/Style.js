@@ -1,25 +1,29 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 const StyledDevicePage = Styled.div`
   width: 100%;
-  margin: 20px 0;
+  font-size: 16px;
+  @media only screen and (max-width: 756px) {
+    font-size: 12px;
+  }
   .top-section {
-    width: 50%;
-    margin: 20px auto;
+    width: 70%;
+    margin: 130px auto;
     text-align: center;
     line-height: 32px;
     @media only screen and (max-width: 756px) {
       width: 90%;
       font-size: 12px;
+      margin: 115px auto;
     }
     img {
-      width: 80%;
+      width: 40%;
       @media only screen and (max-width: 756px) {
-        width: 60%;
+        width: 50%;
       }
     }
     h2 {
-      font-size: 36px;
+      font-size: 32px;
       letter-spacing: 0.15em;
       @media only screen and (max-width: 756px) {
         font-size: 24px;
@@ -31,12 +35,15 @@ const StyledDevicePage = Styled.div`
   }
   .insurance-info {
     width: 100%;
-    margin: 100px 0;
+    margin: 70px 0;
+    @media only screen and (max-width: 756px) {
+      margin: 70px 0;
+    }
     h3 {
       margin-left: 20px;
       font-size: 24px;
       @media only screen and (max-width: 756px) {
-        font-size: 14px;
+        font-size: 18px;
         margin-left: 10px;
       }
     }

@@ -1,30 +1,30 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 const LifeInsuranceStyle = Styled.div`
   width: 100%;
-  margin: 70px 0;
   @media only screen and (max-width: 756px) {
     font-size: 12px;
-    margin: 30px 0;
   }
-  font-size: 18px;
+  font-size: 16px;
   .top-section{
-    width: 50%;
-    margin: 20px auto;
+    width: 70%;
+    margin: 130px auto;
     text-align: center;
     line-height: 32px;
     @media only screen and (max-width: 756px) {
       width: 90%;
       font-size: 12px;
+      margin: 115px auto;
     }
     img {
-      width: 60%;
+      width: 40%;
+      margin: 10px auto;
       @media only screen and (max-width: 756px) {
-        width: 60%;
+        width: 50%;
       }
     }
     h2 {
-      font-size: 36px;
+      font-size: 32px;
       letter-spacing: 0.15em;
       @media only screen and (max-width: 756px) {
         font-size: 24px;
@@ -37,6 +37,9 @@ const LifeInsuranceStyle = Styled.div`
   .benefit-info {
     width: 90%;
     margin: 70px auto;
+    @media only screen and (max-width: 756px) {
+      margin: 40px auto;
+    }
     h2 {
       margin: 10px 0;
     }

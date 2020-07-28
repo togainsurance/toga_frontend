@@ -1,5 +1,6 @@
 {
-  "name": "toga_frontend",
+  "name": "toga-web",
+  "homepage": "https://toga.com.ng",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +12,8 @@
     "react-responsive-carousel": "^3.2.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
+    "react-share": "^4.2.0",
     "styled-components": "^5.1.1"
   },
   "scripts": {

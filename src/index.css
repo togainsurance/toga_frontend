@@ -1,6 +1,12 @@
+@import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap");
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
@@ -8,8 +14,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
   position: relative;
-  overflow-x: hidden;
   box-sizing: border-box;
+  max-width: 100%;
+  line-height: 25px;
 }
 
 h1,
@@ -19,6 +26,11 @@ h4,
 h5,
 h6 {
   font-family: "Lato", sans-serif;
+  margin: 20px 0;
+}
+
+p {
+  margin: 10px 0;
 }
 
 code {
@@ -29,6 +41,11 @@ code {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.dark-header {
+  background: #e2d6cc;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 }
 
 .btn {

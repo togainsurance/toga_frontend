@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 export const PaymentPlanStyle = Styled.section`
     width: 90%;
@@ -76,26 +76,31 @@ export const StyledQuestionSection = Styled.section`
   @media only screen and (max-width: 756px) {
     font-size: 12px;
     .content-container {
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 90%;
       margin: 10px auto;
     div {
-      width: 60%;
+      width: 90%;
+      text-align: center;
     }
     img {
-      width: 130px;
-      height: 130px;
+      display: none;
+      width: 160px;
+      height: 160px;
       margin-top: 30px;
     }
     .btn2 {
       border-radius: 13px 13px 0 13px;
-      display: inline-block;
+      display: block;
       padding: 7px 20px;
       min-width: 50%; 
       background: #6b1587;
       color: white;
       font-weight: 700;
       text-align: center;
+      margin: 10px auto;
     }
   }
 
@@ -129,15 +134,16 @@ export const HowItWorksStyle = Styled.section`
     justify-content: space-between;
     @media only screen and (max-width: 756px) {
       width: 100%;
+      flex-direction: column;
     }
     .sub-section {
       display: grid;
       grid-template-columns: auto;
-      max-width: 20%;
+      max-width: 30%;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       @media only screen and (max-width: 756px) {
-        max-width: 30%;
+        max-width: 100%;
         font-size: 12px;
         padding: 5px;
       }
@@ -145,14 +151,15 @@ export const HowItWorksStyle = Styled.section`
         justify-self: center;
         margin-bottom: 20px;
         @media only screen and (max-width: 756px) {
-          width: 70px;
-          height: 70px;
+          width: 40px;
+          height: 40px;
+          margin-bottom: 0;
         } 
       }
       h2 {
         font-size: 24px;
         @media only screen and (max-width: 756px) {
-          font-size: 14px;
+          font-size: 18px;
         }
       }
     }

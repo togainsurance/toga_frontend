@@ -1,25 +1,26 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 const StyledHomePage = Styled.div`
   .top-section {
-    width: 50%;
-    margin: 30px auto;
+    width: 70%;
+    margin: 130px auto;
     display: grid;
     grid-template-columns: auto;
-    margin-left: 25%;
+    font-size: 16px;
     @media only screen and (max-width: 756px) {
-      width: 70%;
-      margin: 15px auto;
+      width: 100%;
+      margin: 115px auto;
+      font-size: 12px;
     }
     .top-section_title {
       text-align: center;
       justify-self: center;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 45px;
       letter-spacing: 0.15em;
       margin-left: 10px;
       @media only screen and (max-width: 756px) {
-        font-size: 18px;
+        font-size: 24px;
         line-height: 30px;
       }
     }
@@ -32,10 +33,10 @@ const StyledHomePage = Styled.div`
       }
       img {
         display: block;
-        width: 80%;
+        margin: 10px auto;
+        width: 60%;
         @media only screen and (max-width: 756px) {
-          width: 80%;
-          margin: 5px auto;
+          width: 50%;
         }
       }
       .appstore-img {
@@ -45,7 +46,7 @@ const StyledHomePage = Styled.div`
         align-items: center;
         margin: -20px auto;
         @media only screen and (max-width: 756px) {
-          width: 100%
+          width: 70%
         }
         .android {
           width: 120px;
@@ -68,43 +69,43 @@ const StyledHomePage = Styled.div`
   }
 
   .middle-section {
-    width: 100%;
-    margin-left: 10%;
+    width: 90%;
+    margin: 70px auto;
     @media only screen and (max-width: 756px) {
       margin-left: 5px;
     }
     .card {
       display: flex;
-      width: 80%;
-      margin: 10px;
-      font-size: 18px;
+      width: 100%;
+      margin: 20px auto;
+      font-size: 16px;
       .more {
         color: #6b1587;
       }
       @media only screen and (max-width: 756px) {
       font-size: 12px;
       width: 100%;
-      margin: 10px 0;
+      margin: 20px 0;
       }
       h2 {
-        font-size: 34px;
+        font-size: 24px;
         @media only screen and (max-width: 756px) {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
       img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         margin: 10px 20px;
         @media only screen and (max-width: 756px) {
-          width: 120px;
-          height: 120px;
+          width: 100px;
+          height: 100px;
           margin: 5px 10px;
         }
       }
       .description {
         width: 50%;
-        font-size: 18px;
+        font-size: 16px;
         @media only screen and (max-width: 756px) {
           font-size: 12px;
         }
@@ -119,36 +120,38 @@ const StyledHomePage = Styled.div`
   .bottom-section {
     width: 80%;
     display: flex;
-    margin: 30px auto;
+    margin: 120px auto;
     justify-content: space-between;
-    padding: 5% 5px;
+    padding: 5px;
     @media only screen and (max-width: 756px) {
       width: 90%;
-      padding: 10px;
+      flex-direction: column;
+      padding: 15px;
+      margin: 60px auto;
     }
     .card2 {
       background: #f7f7f7;
       padding: 10px 30px;
-      width: 30%;
-      font-size: 18px;
+      width: 40%;
+      font-size: 16px;
       text-align: center;
       position: relative;
       display: grid;
       align-items: center;
       @media only screen and (max-width: 756px) {
         font-size: 12px;
-        width: 40%;
-        padding: 5px 10px;
+        width: 90%;
+        padding: 5px;
+        margin: 20px auto;
       }
 
       img {
         position: absolute;
         width: 40%;
-        top: -40%;
+        top: -50%;
         left: 30%;
         @media only screen and (max-width: 756px) {
-          top: -10%;
-          width: 50%;
+          position: relative;
         }
       }
     }
@@ -156,8 +159,11 @@ const StyledHomePage = Styled.div`
       display: flex;
       flex-direction: column;
       margin: 30px auto;
-      button {
-        width: 70%;
+      @media only screen and (max-width: 756px) {
+        margin: 5px auto;
+      }
+      .btn {
+        width: 100%;
         align-self: center;
         justify-self: flex-end;
         @media only screen and (max-width: 756px) {
@@ -177,7 +183,7 @@ const StyledHomePage = Styled.div`
       margin: 10px 0;
     }
     h2 {
-      font-size: 36px;
+      font-size: 24px;
       margin-left: 20px;
       @media only screen and (max-width: 756px) {
         font-size: 18px;
