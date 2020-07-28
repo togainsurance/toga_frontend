@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LifeInsuranceStyle from "./Style";
-import { PaymentPlanStyle, StyledQuestionSection } from "../commonStyle";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LifeInsuranceStyle from './Style';
+import { PaymentPlanStyle, StyledQuestionSection } from '../commonStyle';
 
 const LifeInsurancePage = () => {
   return (
     <LifeInsuranceStyle>
-      <section className="top-section">
+      <section className='top-section'>
         <h2>Basic Life Insurance</h2>
         <img
-          src="https://res.cloudinary.com/toga-insure/image/upload/v1592308720/CommingSoonPage/cardimg4_oxvwnd.png"
-          alt="Life Insurance"
+          src='https://res.cloudinary.com/toga-insure/image/upload/v1592308720/CommingSoonPage/cardimg4_oxvwnd.png'
+          alt='Life Insurance'
         />
-        <p className="all-caps">Protecting the present and the future</p>
+        <p className='all-caps'>Protecting the present and the future</p>
         <p>
           Toga basic life insurance, offers benefits of protection against
           personal accident, permanent disability and life that the user might
@@ -20,20 +20,20 @@ const LifeInsurancePage = () => {
           compensation payments to the beneficiary of the insured user.
         </p>
       </section>
-      <section className="benefit-info">
+      <section className='benefit-info'>
         <h3>It works in such ways as:</h3>
         <div>
           <p>
-            <strong className="title">Personal Accident</strong> - in which a
+            <strong className='title'>Personal Accident</strong> - in which a
             sum is paid for medical expense as a result of an accident.
           </p>
           <p>
-            <strong className="title">Permanent Disability</strong> - provide
+            <strong className='title'>Permanent Disability</strong> - provide
             protection to users who become disabled as a result can no longer
             work.
           </p>
           <p>
-            <strong className="title">Life Cover</strong> - A fee is paid to the
+            <strong className='title'>Life Cover</strong> - A fee is paid to the
             beneficiary of the policyholder as a result of the death of the
             holder.
           </p>
@@ -72,9 +72,9 @@ const LifeInsurancePage = () => {
           </tbody>
         </table>
       </PaymentPlanStyle>
-      <StyledQuestionSection className="questions">
+      <StyledQuestionSection className='questions'>
         <h2>Some Questions & Answers</h2>
-        <div className="content-container">
+        <div className='content-container'>
           <div>
             <h3>We understand, you’re busy.</h3>
             <p>
@@ -82,13 +82,13 @@ const LifeInsurancePage = () => {
               waiting period, no shenanigans.
             </p>
             <p>Simply get answers from the mostly asked questions.</p>
-            <Link to="/not-available" className="btn2">
+            <Link to='/question/basic-life' className='btn2'>
               Get Started
             </Link>
           </div>
           <img
-            src="https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png"
-            alt="curious Happy customer"
+            src='https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png'
+            alt='curious Happy customer'
           />
         </div>
       </StyledQuestionSection>

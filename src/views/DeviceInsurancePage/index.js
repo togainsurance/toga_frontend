@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import StyledDevicePage from "./Style";
-import { PaymentPlanStyle, StyledQuestionSection } from "../commonStyle";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import StyledDevicePage from './Style';
+import { PaymentPlanStyle, StyledQuestionSection } from '../commonStyle';
 
 const DeviceInsurance = () => {
   return (
     <StyledDevicePage>
-      <section className="top-section">
+      <section className='top-section'>
         <h2>Device Insurance</h2>
         <img
-          src="https://res.cloudinary.com/toga-insure/image/upload/v1592308720/CommingSoonPage/cardimg2_exvz2t.png"
-          alt="Device Insurance"
+          src='https://res.cloudinary.com/toga-insure/image/upload/v1592308720/CommingSoonPage/cardimg2_exvz2t.png'
+          alt='Device Insurance'
         />
-        <p className="all-caps">
+        <p className='all-caps'>
           Protection for the devices that keep us connected
         </p>
         <p>
@@ -27,79 +27,79 @@ const DeviceInsurance = () => {
           device.
         </p>
       </section>
-      <section className="insurance-info">
+      <section className='insurance-info'>
         <h3>
           Toga mobile insurance offers the following services for new and in use
           devices:
         </h3>
-        <div className="info-grid">
-          <div className="info-box">
+        <div className='info-grid'>
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/dropletIcon_rxra8r.png"
-              alt="Droplet"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/dropletIcon_rxra8r.png'
+              alt='Droplet'
             />
-            <p className="info-text">You’re protected from water damage</p>
+            <p className='info-text'>You’re protected from water damage</p>
           </div>
-          <div className="info-box">
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/screenIcon_wyeszk.png"
-              alt="Smart Phone"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/screenIcon_wyeszk.png'
+              alt='Smart Phone'
             />
-            <p className="info-text">You’re protected from screen damage</p>
+            <p className='info-text'>You’re protected from screen damage</p>
           </div>
-          <div className="info-box">
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665982/CommingSoonPage/wifiIcon_mip8gi.png"
-              alt="Wifi Symbol"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665982/CommingSoonPage/wifiIcon_mip8gi.png'
+              alt='Wifi Symbol'
             />
-            <p className="info-text">
+            <p className='info-text'>
               You get coverage immediately, everywhere you go in Nigeria
             </p>
           </div>
-          <div className="info-box">
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/locationIcon_mdqkzi.png"
-              alt="Locator Icon"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/locationIcon_mdqkzi.png'
+              alt='Locator Icon'
             />
-            <p className="info-text">
+            <p className='info-text'>
               Device tracking for search in case of a stolen or misplaced phone
             </p>
           </div>
-          <div className="info-box">
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/compassIcon_c6cxsz.png"
-              alt="Compass Icon"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/compassIcon_c6cxsz.png'
+              alt='Compass Icon'
             />
-            <p className="info-text">
+            <p className='info-text'>
               Pick up of damaged device and return of repaired device
             </p>
           </div>
-          <div className="info-box">
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665982/CommingSoonPage/databaseIcon_e3d0q1.png"
-              alt="Database Icon"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665982/CommingSoonPage/databaseIcon_e3d0q1.png'
+              alt='Database Icon'
             />
-            <p className="info-text">Cheap cost to repair little fixes</p>
+            <p className='info-text'>Cheap cost to repair little fixes</p>
           </div>
           <div></div>
-          <div className="info-box">
+          <div className='info-box'>
             <img
-              className="info-image"
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/cpuIcon_culpxq.png"
-              alt="CPU icon"
+              className='info-image'
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592665981/CommingSoonPage/cpuIcon_culpxq.png'
+              alt='CPU icon'
             />
-            <p className="info-text">Future upgrade assistance</p>
+            <p className='info-text'>Future upgrade assistance</p>
           </div>
           <div></div>
         </div>
       </section>
-      <div className="middle-section">
+      <div className='middle-section'>
         <p>
           The insurance plan pays for damage to devices from water and screen
           damages. We do not ask for extra fees from you for any of our
@@ -161,9 +161,9 @@ const DeviceInsurance = () => {
           </tbody>
         </table>
       </PaymentPlanStyle>
-      <StyledQuestionSection className="questions">
+      <StyledQuestionSection className='questions'>
         <h2>Some Questions & Answers</h2>
-        <div className="content-container">
+        <div className='content-container'>
           <div>
             <h3>We understand, you’re busy.</h3>
             <p>
@@ -171,13 +171,13 @@ const DeviceInsurance = () => {
               waiting period, no shenanigans.
             </p>
             <p>Simply get answers from the mostly asked questions.</p>
-            <Link to="/not-available" className="btn2">
+            <Link to='/question/device' className='btn2'>
               Get Started
             </Link>
           </div>
           <img
-            src="https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png"
-            alt="curious Happy customer"
+            src='https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png'
+            alt='curious Happy customer'
           />
         </div>
       </StyledQuestionSection>

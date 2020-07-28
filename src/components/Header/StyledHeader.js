@@ -1,26 +1,29 @@
 import Styled from "styled-components";
 
 const StyledHeader = Styled.header`
-  position: relative;
-  margin: 0;
+  position: fixed;
+  top: 0;
+  display:flex;
+  margin: 0 0 50px 0;
   box-sizing: border-box;
   width: 100%;
-  /* border: 1px solid red; */
+  transition: background 0.5s;
+  min-height: 10%;
+  z-index: 999;
 
 .header {
-  width: 95%;
-  display: grid;
-  grid-template-columns: 10% 50%;
-  grid-column-gap: 65%;
+  width: 90%;
+  display: flex;
   margin: 15px auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-items {
   display: flex;
-  width: 50%;
   justify-content: space-between;
   box-sizing: border-box;
-  justify-self: end;
+  min-width: 350px;
 }
 
 .header-item {
@@ -32,35 +35,16 @@ const StyledHeader = Styled.header`
   }
 }
 
-.header-line {
-  width: 90%;
-  margin: auto;
-  border: 1px solid #a3a3a3;
-  position: absolute;
-  left: 5%;
-  top: 100%;
-}
-
 @media only screen and (max-width: 756px) {
   .header {
-    display: flex;
-    justify-content: space-between;
+    width: 95%;
   }
-
   .header-items {
-    width: 98%;
-    justify-content: space-between;
-    justify-self: end;
+    min-width: 100%;
   }
   .header-item {
     font-size: 12px;
     font-weight: 500;
-  }
-
-  .header-line {
-    width: 74%;
-    left: 18%;
-    top: 100%;
   }
   .desktop-only{
     display: none;

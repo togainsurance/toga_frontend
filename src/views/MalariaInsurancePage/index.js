@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import MalariaStyle from "./Style";
-import { PaymentPlanStyle, StyledQuestionSection } from "../commonStyle";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import MalariaStyle from './Style';
+import { PaymentPlanStyle, StyledQuestionSection } from '../commonStyle';
 
 const MalariaPage = () => {
   return (
     <MalariaStyle>
-      <section className="top-section">
+      <section className='top-section'>
         <h2>Malaria Insurance</h2>
         <img
-          src="https://res.cloudinary.com/toga-insure/image/upload/v1592308720/CommingSoonPage/cardimg3_mekcty.png"
-          alt="Device Insurance"
+          src='https://res.cloudinary.com/toga-insure/image/upload/v1592308720/CommingSoonPage/cardimg3_mekcty.png'
+          alt='Device Insurance'
         />
-        <p className="all-caps">
+        <p className='all-caps'>
           Treat yourself and family members against malaria for as low as ₦400 a
           month
         </p>
@@ -21,7 +21,7 @@ const MalariaPage = () => {
           rate of one in every five Nigerians having malaria every month
         </p>
       </section>
-      <section className="benefit-info">
+      <section className='benefit-info'>
         <h3>The benefits of this plan include:</h3>
         <ol>
           <li>Testing for malaria and other ailments</li>
@@ -29,42 +29,42 @@ const MalariaPage = () => {
           <li>Health tips on how to recover and prevent malaria</li>
         </ol>
       </section>
-      <section className="howitworks-info">
+      <section className='howitworks-info'>
         <h3>How it works :</h3>
-        <div className="details">
+        <div className='details'>
           <p>Sign Up</p>
           <span>
             <img
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png"
-              alt="Arrow"
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png'
+              alt='Arrow'
             />
           </span>
           <p>Feel ill</p>
           <span>
             <img
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png"
-              alt="Arrow"
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png'
+              alt='Arrow'
             />
           </span>
           <p>Request Treatment</p>
           <span>
             <img
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png"
-              alt="Arrow"
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png'
+              alt='Arrow'
             />
           </span>
           <p>Run a test to confirm it's malaria</p>
           <span>
             <img
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png"
-              alt="Arrow"
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png'
+              alt='Arrow'
             />
           </span>
           <p>Visit the nearest pharmacy</p>
           <span>
             <img
-              src="https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png"
-              alt="Arrow"
+              src='https://res.cloudinary.com/toga-insure/image/upload/v1592920447/CommingSoonPage/arrow_xravhq.png'
+              alt='Arrow'
             />
           </span>
           <p>Get free drugs</p>
@@ -121,9 +121,9 @@ const MalariaPage = () => {
           </tbody>
         </table>
       </PaymentPlanStyle>
-      <StyledQuestionSection className="questions">
+      <StyledQuestionSection className='questions'>
         <h2>Some Questions & Answers</h2>
-        <div className="content-container">
+        <div className='content-container'>
           <div>
             <h3>We understand, you’re busy.</h3>
             <p>
@@ -131,13 +131,13 @@ const MalariaPage = () => {
               waiting period, no shenanigans.
             </p>
             <p>Simply get answers from the mostly asked questions.</p>
-            <Link to="/not-available" className="btn2">
+            <Link to='/question/malaria' className='btn2'>
               Get Started
             </Link>
           </div>
           <img
-            src="https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png"
-            alt="curious Happy customer"
+            src='https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png'
+            alt='curious Happy customer'
           />
         </div>
       </StyledQuestionSection>

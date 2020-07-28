@@ -1,17 +1,24 @@
 import Styled from "styled-components";
 
 const FooterStyle = Styled.footer`
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  padding: 20px 20px 5px 20px;
-  background: #f7f7f7;
+  padding: 20px 0;
+  background: #e2d6cc;
+  /* background: #717171; */
+  @media only screen and (max-width: 856px) {
+   text-align: center;
+   .footer-bottom, .footer-middle {
+     text-align: left;
+   }
+  }
   .footer-top {
     display: flex;
     justify-content: space-between;
-    padding-right: 5%;
     @media only screen and (max-width: 856px) {
-      padding-right: 2%;
+      flex-direction: column-reverse;
+      padding: 0;
+      .footer-top__left-title {
+        text-align: center;
+      }
     }
   }
 
@@ -19,51 +26,44 @@ const FooterStyle = Styled.footer`
 .footer-top,
 .footer-bottom {
   width: 90%;
-  margin-left: 5%;
+  margin: 10px auto;
+  font-size: 14px;
   @media only screen and (max-width: 856px) {
     width: 95%;
-    font-size: 10px;
+    font-size: 12px;
+    margin: 5px auto;
   }
 }
 
 .footer-top__left {
   min-width: 514px;
-  box-sizing: border-box;
   @media only screen and (max-width: 856px) {
-    min-width: 30%;
+    min-width: 100%;
   }
 }
 
 .footer-top__right {
-  margin-right: 4%;
-}
-
-.footer-top__left .msg-body {
-  width: 94%;
-  display: block;
-  height: 172px;
-  border: none;
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  resize: none;
+  padding: 10px;
   @media only screen and (max-width: 856px) {
-    height: 60px;
-    width: 70%;
+    margin: 0 auto 0 auto;
+    .footer-logo {
+      margin-left: -50px;
+    }
   }
 }
 
-.footer-top__left .msg-body,
-.footer-top__left__bottom input,
-.footer-top__left__bottom button {
-  border-radius: 21px;
-  outline: none;
+.footer-top__left-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 10px;
+  @media only screen and (max-width: 856px) {
+    font-size: 16px;
+  }
 }
 
 .footer-top__left__bottom input,
 .footer-top__left__bottom button {
   @media only screen and (max-width: 856px) {
-    width: 100%;
-    display: block;
     margin-bottom: 10px;
   }
 }
@@ -79,7 +79,6 @@ const FooterStyle = Styled.footer`
 
 .footer-top__left__bottom input {
   width: 65%;
-  border-radius: 21px;
   display: inline-block;
   padding: 10px 15px;
   border: none;
@@ -88,21 +87,54 @@ const FooterStyle = Styled.footer`
 .footer-top__left__bottom button {
   width: 35%;
   justify-self: flex-end;
-  margin-left: 5%;
 }
 
+.footer-top__left__bottom input{
+  border-radius: 13px 0 0 13px;
+}
+.footer-top__left .msg-body,
+.footer-top__left__bottom input,
+.footer-top__left__bottom button {
+  outline: none;
+  @media only screen and (max-width: 856px) {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+.footer-top__left__bottom button {
+    border-radius: 0 13px 13px 0;
+  @media only screen and (max-width: 856px) {
+    width: 90%;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+
+
 .footer-items {
-  width: 90%;
-  padding-left: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  @media only screen and (max-width: 856px) {
+    padding: 5px;
+    margin: 5px 0;
+  }
 }
 
 .footer-item {
   list-style: none;
   font-size: 16px;
   font-weight: 500;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+  &:hover {
+    cursor: pointer;
+    font-weight: bolder;
+  }
   @media only screen and (max-width: 856px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -110,6 +142,9 @@ const FooterStyle = Styled.footer`
   border: 1px solid #888888;
   width: 95%;
   margin: 10px auto;
+  @media only screen and (max-width: 856px) {
+    width: 100%;
+  }
 }
 `;
 

@@ -2,23 +2,21 @@ import Styled from "styled-components";
 
 const ReferralPageStyle = Styled.div`
   width: 100%;
-  margin: 50px 0;
-  font-size: 18px;
+  font-size: 16px;
   @media only screen and (max-width: 756px) {
     font-size: 12px;
-    margin: 30px 0;
   }
   .top-section {
-    width: 50%;
-    margin: 20px auto;
+    width: 70%;
+    margin: 130px auto;
     line-height: 24px;
     text-align: center;
     word-spacing: 0.25em;
     @media only screen and (max-width: 756px) {
-      width: 95%;
+      width: 90%;
       font-size: 12px;
       word-spacing: 0.05em;
-      margin: 10px auto;
+      margin: 115px auto;
     }
     h2 {
       font-size: 32px;
@@ -31,12 +29,11 @@ const ReferralPageStyle = Styled.div`
       }
     }
     img {
-      width: 80%;
-      margin: 30px auto;
+      width: 60%;
+      margin: 10px auto;
       display: block;
       @media only screen and (max-width: 756px) {
-        margin: 10px auto;
-        width: 70%;
+        width: 40%;
       }
     }
     .btn {
@@ -54,7 +51,7 @@ const ReferralPageStyle = Styled.div`
     background: #f7f7f7;
     width: 100%;
     margin: 150px 0 90px 0;
-    padding: 20px 10px;
+    padding: 30px 0;
     position: relative;
     @media only screen and (max-width: 756px) {
       margin: 90px 0;
