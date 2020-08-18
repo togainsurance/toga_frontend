@@ -1,9 +1,8 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 const FooterStyle = Styled.footer`
   padding: 20px 0;
   background: #e2d6cc;
-  /* background: #717171; */
   @media only screen and (max-width: 856px) {
    text-align: center;
    .footer-bottom, .footer-middle {

@@ -27,6 +27,36 @@ const DeviceInsurance = () => {
           device.
         </p>
       </section>
+      <div className='plan-card__container'>
+        <div className='plan-card__left plan-card'>
+          <h2>Basic</h2>
+          <p>Single User</p>
+          <img
+            src='https://res.cloudinary.com/toga-insure/image/upload/v1596548031/CommingSoonPage/personalLogo_oamege.png'
+            alt='Single user logo'
+          />
+          <p>d=Device pick up and delivery for free</p>
+          <p>24 Hours Customer Service</p>
+          <Link to='/not-available' className='btn'>
+            Get plan
+          </Link>
+        </div>
+        <div className='plan-card__right plan-card'>
+          <h2>Enterprise</h2>
+          <p>Corporate, teams and retail</p>
+          <img
+            src='https://res.cloudinary.com/toga-insure/image/upload/v1596548031/CommingSoonPage/groupLogo_dqygey.png'
+            alt='team user logo'
+          />
+          <p>Discount/Percentage for Bulk Registration</p>
+          <p>In-Person staff available for repairs</p>
+          <p>Device pick up and delivery for free</p>
+          <p>24 Hours Customer Service</p>
+          <Link to='/dashboard' className='btn'>
+            Get plan
+          </Link>
+        </div>
+      </div>
       <section className='insurance-info'>
         <h3>
           Toga mobile insurance offers the following services for new and in use
@@ -175,10 +205,6 @@ const DeviceInsurance = () => {
               Get Started
             </Link>
           </div>
-          <img
-            src='https://res.cloudinary.com/toga-insure/image/upload/v1592922060/CommingSoonPage/questionsimg_xnhh7i.png'
-            alt='curious Happy customer'
-          />
         </div>
       </StyledQuestionSection>
     </StyledDevicePage>

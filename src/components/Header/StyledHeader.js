@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 const StyledHeader = Styled.header`
   position: fixed;
@@ -10,6 +10,11 @@ const StyledHeader = Styled.header`
   transition: background 0.5s;
   min-height: 10%;
   z-index: 999;
+
+  .companyName {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
 
 .header {
   width: 90%;

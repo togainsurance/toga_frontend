@@ -1,0 +1,7 @@
+export const USER_SIGNUP = 'USER_SIGNUP';
+export const USER_SIGNUP_FAIL = 'USER_SIGNUP_FAIL';
+
+export const SIGN_IN_USER = 'SIGN_IN_USER';
+export const SIGN_IN_USER_ERROR = 'SIGN_IN_USER_ERROR';
+
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';

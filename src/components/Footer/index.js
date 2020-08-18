@@ -11,7 +11,7 @@ const Footer = () => {
         <form className='footer-top__left'>
           <h2 className='footer-top__left-title'>Follow us</h2>
           <div className='footer-top__left__bottom'>
-            <input type='email' id='email' placeholder='Email Address' />
+            <input type='email' id='subEmail' placeholder='Email Address' />
             <button className='btn'>send</button>
           </div>
           <SocialLinks />
@@ -35,8 +35,8 @@ const Footer = () => {
       <hr className='footer-line' />
       <div className='footer-middle'>
         <p>
-          Toga Micro-Insurance is registered in the Federal Republic of Nigeria
-          as a private limited liability company. Toga insurance is operated in
+          Toga Insurance is registered in the Federal Republic of Nigeria as a
+          private limited liability company. Toga insurance is operated in
           partnership with NAICOM approved insurers. We offer life and non-life
           micro insurance products and services to individuals and small
           businesses for the Nigerian market.{' '}
@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
       <hr className='footer-line' />
       <div className='footer-bottom'>
-        <p>Toga Micro-Insurance, 2020.</p>
+        <p>Toga Technology, 2020.</p>
       </div>
     </FooterStyle>
   );

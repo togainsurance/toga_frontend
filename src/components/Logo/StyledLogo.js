@@ -1,18 +1,19 @@
-import Styled from "styled-components";
+import Styled from 'styled-components';
 
 const Logo = Styled.div`
   color: #6b1587;
   font-family: Roboto, "san-serif";
   font-style: bold;
   font-weight: 500;
-  font-size: 36px;
-  line-height: 42px;
-  display: block;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   .logo-text {
     display: inline-block;
-    position: absolute;
-    bottom: 8%;
+    text-transform: uppercase;
   }
   img {
   display: inline-block;
