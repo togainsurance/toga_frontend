@@ -1,5 +1,23 @@
 import Styled from 'styled-components';
 
+export const FormTopDecor = Styled.div`
+  display: flex;
+  justify-content: space-between;
+  img {
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+    border: 10px solid #6b1587;
+  }
+  hr {
+    border: 1px solid #000000;
+    width: 40%;
+    align-self: center;
+    justify-self: flex-start;
+    display: block;
+  }
+`;
+
 export const PaymentPlanStyle = Styled.section`
     width: 90%;
     margin: 70px auto;

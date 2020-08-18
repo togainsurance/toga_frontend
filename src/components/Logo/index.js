@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import StyledLogo from "./StyledLogo";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import StyledLogo from './StyledLogo';
 
 const Logo = () => (
-  <Link to="/">
+  <Link to='/'>
     <StyledLogo>
       <img
-        src="https://res.cloudinary.com/toga-insure/image/upload/v1589798290/CommingSoonPage/TogaLogo_2x_xhi9a1.png"
-        alt="logo"
+        src='https://res.cloudinary.com/toga-insure/image/upload/v1589798290/CommingSoonPage/TogaLogo_2x_xhi9a1.png'
+        alt='logo'
       />
-      <p className="logo-text">Toga</p>
+      <p className='logo-text'>Toga insurance</p>
     </StyledLogo>
   </Link>
 );

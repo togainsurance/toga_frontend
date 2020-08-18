@@ -33,6 +33,31 @@ const StyledDevicePage = Styled.div`
       text-transform: uppercase;
     }
   }
+  .plan-card__container {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+  .plan-card {
+    text-align: center;
+    background: #F7F7F7;
+    padding: 5px 30px 20px 30px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+    h2 {
+      font-size: 24px;
+    }
+    img {
+      width: 100px;
+    }
+    .btn {
+      width: 70%;
+      border-radius: 9px;
+      display: block;
+      margin: 10px auto;
+    }
+  }
   .insurance-info {
     width: 100%;
     margin: 70px 0;
