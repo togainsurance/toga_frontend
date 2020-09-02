@@ -35,7 +35,7 @@ const Dashboard = ({ history }) => {
           </div>
           <button className='btn'>Submit</button>
         </form>
-        <Link to='/not-available' className='btn add-device-btn'>
+        <Link to='/dashboard/add-device' className='btn add-device-btn'>
           <i className='icon fa fa-plus-circle'></i>
           &nbsp; Add devices
         </Link>

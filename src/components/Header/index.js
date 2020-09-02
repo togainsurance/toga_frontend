@@ -11,9 +11,9 @@ const Header = ({ user }) => {
       let headerContainer = document.getElementById('header-container');
 
       if (window.pageYOffset > 0) {
-        headerContainer.classList.add('dark-header');
+        headerContainer.classList.add('secondary-header');
       } else {
-        headerContainer.classList.remove('dark-header');
+        headerContainer.classList.remove('secondary-header');
       }
     });
   });

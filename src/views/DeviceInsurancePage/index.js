@@ -35,7 +35,7 @@ const DeviceInsurance = () => {
             src='https://res.cloudinary.com/toga-insure/image/upload/v1596548031/CommingSoonPage/personalLogo_oamege.png'
             alt='Single user logo'
           />
-          <p>d=Device pick up and delivery for free</p>
+          <p>Device pick up and delivery for free</p>
           <p>24 Hours Customer Service</p>
           <Link to='/not-available' className='btn'>
             Get plan

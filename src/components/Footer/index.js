@@ -35,11 +35,11 @@ const Footer = () => {
       <hr className='footer-line' />
       <div className='footer-middle'>
         <p>
-          Toga Insurance is registered in the Federal Republic of Nigeria as a
-          private limited liability company. Toga insurance is operated in
-          partnership with NAICOM approved insurers. We offer life and non-life
-          micro insurance products and services to individuals and small
-          businesses for the Nigerian market.{' '}
+          Toga is a product of Toga Technology which is registered in the
+          Federal Republic of Nigeria as a private limited liability company.
+          Toga is operated in partnership with NAICOM approved insurers. We
+          provide access to life and non-life insurance products and services to
+          individuals and small businesses for the Nigerian market.{' '}
         </p>
       </div>
       <hr className='footer-line' />
