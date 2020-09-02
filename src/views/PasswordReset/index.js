@@ -11,7 +11,7 @@ function useQuery() {
 
 const EmailReset = ({ history }) => {
   const [state, setState] = useState({ password: '', confirmPassword: '' });
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   let query = useQuery();
 
   const handleChange = (e) => {

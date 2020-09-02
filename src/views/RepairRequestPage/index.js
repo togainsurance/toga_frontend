@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import selectStyle from './selectStyle';
+import selectStyle from '../selectStyle';
 import RepairRequestStyle from './Style';
 
 const RepairRequest = () => {

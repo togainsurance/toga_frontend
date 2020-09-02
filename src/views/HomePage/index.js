@@ -54,8 +54,8 @@ const HomePage = () => {
             <h2>Insurance made easy just for you</h2>
             <p>
               From protecting your devices to helping you protect your health
-              and life, Toga Insurance offers insurance plans that reduce your
-              worries
+              and life, Toga offers a platform for insurance plans that reduce
+              your worries.
             </p>
           </div>
         </div>
@@ -148,8 +148,8 @@ const HomePage = () => {
             />
             <h2>Make a claim request</h2>
             <p>
-              Create an account, tell us what you would like to protect and pay
-              the premium.
+              Tell us within 48hrs about any damage to your device or you
+              needing assistance for health.
             </p>
           </div>
           <div className='sub-section'>

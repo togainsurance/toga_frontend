@@ -21,6 +21,7 @@ import EmailReset from './views/EmailReset';
 import EmailResetSuccess from './views/EmailReset/EmailResetSuccess';
 import PasswordReset from './views/PasswordReset';
 import Dashboard from './views/Dashboard';
+import AddDevicePage from './views/AddDevicePage';
 import Payments from './views/Payments';
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <Switch>
         <Route path='/' exact component={HomePage} />
         <Route path='/device' component={DeviceInsurancePage} />
+        <Route path='/dashboard/add-device' component={AddDevicePage} />
         <Route path='/dashboard' component={Dashboard} />
         <Route path='/payments' component={Payments} />
         <Route path='/signin' component={Signin} />

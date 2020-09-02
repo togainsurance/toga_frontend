@@ -1,16 +1,17 @@
 const selectStyle = {
   control: (styles, { isFocused }) => ({
     ...styles,
-    backgroundColor: '#6b1587',
-    color: '#fff',
-    borderColor: isFocused ? /* istanbul ignore next */ 'none' : '#6b1587',
+    backgroundColor: 'fff',
+    color: 'black',
+    borderColor: isFocused ? /* istanbul ignore next */ '#6b1587' : 'none',
     outline: 'none',
   }),
   container: (styles) => ({
     ...styles,
+    minWidth: '100%',
     outline: 'none',
     borderColor: 'none',
-    color: '#fff',
+    color: 'black',
   }),
   option: (styles, { isDisabled, isFocused, isSelected }) => {
     /* istanbul ignore next */
@@ -26,26 +27,28 @@ const selectStyle = {
   },
   placeholder: (styles) => ({
     ...styles,
-    color: '#fff',
+    color: 'black',
   }),
 
   singleValue: (styles) => {
     /* istanbul ignore next */
+
     return {
       ...styles,
-      color: 'white',
+      color: 'black',
       textTransform: 'capitalize',
     };
   },
-  dropdownIndicator: (styles) => ({
-    ...styles,
-    color: '#fff',
-  }),
+  dropdownIndicator: (styles, { isFocused, isSelected }) => {
+    const color = '#6b1587';
+
+    return { ...styles, color: isFocused || isSelected ? 'black' : color };
+  },
   indicatorSeparator: (styles) => {
     /* istanbul ignore next */
     return {
       ...styles,
-      color: '#fff',
+      color: 'black',
     };
   },
 
