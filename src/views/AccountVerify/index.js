@@ -11,7 +11,7 @@ function useQuery() {
 const AccountVerificationPage = ({ history }) => {
   let query = useQuery();
 
-  const verifyToken = (function (token) {
+  const verifyToken = function (token) {
     axios
       .post(
         '/verify-account',
@@ -45,7 +45,7 @@ const AccountVerificationPage = ({ history }) => {
           history.push('/restart-verification');
         }
       });
-  })();
+  };
 
   useEffect(() => {
     const token = query.get('token');
