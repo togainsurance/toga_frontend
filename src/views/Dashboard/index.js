@@ -1,31 +1,86 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import csvParser from 'papaparse'
+import { toast } from 'react-toastify';
+import pick  from 'lodash.pick'
+import { addDevices } from './addDevices'
 import Nav from '../../components/DashboardNav';
 import StyledDashbord from './Style';
 import { store } from '../../index';
 import { setUser } from '../Auth/Auth.actions';
 
-const Dashboard = ({ history }) => {
-  if (localStorage.userToken) {
-    // get user object
-    const userToken = JSON.parse(localStorage.userToken);
-    if (userToken) {
-      store.dispatch(setUser(userToken, history));
+
+class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleFileSubmit = this.handleFileSubmit.bind(this);
+    this.fileInput = React.createRef();
+  }
+  state = {
+    fileName: "",
+    file: [],
+    loading: false
+  }
+  componentDidMount(){
+    if (localStorage.userToken) {
+      // get user object
+      const userToken = JSON.parse(localStorage.userToken);
+      if (userToken) {
+        store.dispatch(setUser(userToken, this.props.history));
+      }
+    } else {
+      this.props.history.push('/signin');
+    
     }
-  } else {
-    history.push('/signin');
+  }
+  handleFileSubmit = async (e) => {
+    e.preventDefault();
+    this.setState({loading: true})
+   const devices = this.state.file
+    await addDevices(devices)
+    this.setState({loading: false})
+  }
+  convertToArrayOfObjects = (data) =>  {
+    let newKeys = data.shift();
+    let keys = newKeys.splice(0, newKeys.length-1)
+    data = data.map((row) => {
+    return keys.reduce((obj, key, i) => {
+      
+      obj[key] = row[i];
+     
+      return obj;
+    }, {});
+});
+return data
+ 
+}
+
+  handleChange = (e) => {
+  e.preventDefault();
+   if(!this.fileInput.current.files[0].name.endsWith('.csv')){
+     return toast.error('Only .csv files are allowed. Please try Again');
+   }
+   csvParser.parse(this.fileInput.current.files[0], {
+    complete: (results) => {
+     const payload = this.convertToArrayOfObjects(results.data)
+      this.setState({ fileName: this.fileInput.current.files[0].name, file: payload.splice(0, payload.length-1)})
+    }
+  });
   }
 
+  render() {
+
+  
   return (
     <StyledDashbord className='Dashboard'>
-      <Nav history={history} />
+      <Nav history={this.props.history} />
       <div className='body'>
         <form className='bulk-user'>
           <div className='input-field'>
-            <input type='file' id='file' accept='.csv' />
+            <input type='file' id='file' ref={this.fileInput} accept='.csv' onSubmit={(e) => this.handleFileSubmit(e)} onChange={this.handleChange} />
             <label htmlFor='file'>
               <i className='icon fa fa-cloud-upload'></i>
-              &nbsp; Import Excel csv file
+              &nbsp; {this.state.fileName || 'Import Excel csv file'}
             </label>
             <p className='input-info'>
               Must contain device information, serial or imei number, value of
@@ -33,7 +88,7 @@ const Dashboard = ({ history }) => {
               before.
             </p>
           </div>
-          <button className='btn'>Submit</button>
+          <button onClick={(e) => this.handleFileSubmit(e)} type="submit" className='btn'>{this.state.loading ? "Submitting" :"Submit"}</button>
         </form>
         <Link to='/dashboard/add-device' className='btn add-device-btn'>
           <i className='icon fa fa-plus-circle'></i>
@@ -84,6 +139,9 @@ const Dashboard = ({ history }) => {
       </div>
     </StyledDashbord>
   );
+  }
 };
+
+
 
 export default Dashboard;
