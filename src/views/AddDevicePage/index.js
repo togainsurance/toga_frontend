@@ -5,6 +5,7 @@ import selectStyle from '../selectStyle';
 import Style from './Style';
 
 const AddDevicePage = ({ history }) => {
+
   return (
     <Style>
       <Nav history={history} />
