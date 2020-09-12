@@ -11,41 +11,43 @@ function useQuery() {
 const AccountVerificationPage = ({ history }) => {
   let query = useQuery();
 
-  const verifyToken = function (token) {
-    axios
-      .post(
-        '/verify-account',
-        {},
-        {
-          headers: {
-            authorization: `Basic ${token}`,
-          },
-        }
-      )
-      .then((response) => {
-        if (response.status === 200) {
-          setTimeout(() => {
-            toast.success(
-              'Account Verification was successful, sign in to continue'
-            );
-            history.push('/signin');
-          }, 3000);
-        }
-      })
-      .catch((error) => {
-        if (error.message === 'Network Error') {
-          return toast.error('Something went wrong. Please try Again');
-        } else if (error.response.status === 400) {
-          setTimeout(() => {
+  const verifyToken = React.useCallback(
+    (token) => {
+      axios
+        .post(
+          '/verify-account',
+          {},
+          {
+            headers: {
+              authorization: `Basic ${token}`,
+            },
+          }
+        )
+        .then((response) => {
+          if (response.status === 200) {
+            setTimeout(() => {
+              toast.success(
+                'Account Verification was successful, sign in to continue'
+              );
+              history.push('/signin');
+            }, 3000);
+          }
+        })
+        .catch((error) => {
+          if (error.message === 'Network Error') {
+            return toast.error('Something went wrong. Please try Again');
+          } else if (error.response.status === 400) {
+            setTimeout(() => {
+              toast.error(error.response.data.error);
+              history.push('/signin');
+            }, 1000);
+          } else {
             toast.error(error.response.data.error);
-            history.push('/signin');
-          }, 1000);
-        } else {
-          toast.error(error.response.data.error);
-          history.push('/restart-verification');
-        }
-      });
-  };
+            history.push('/restart-verification');
+          }
+        });
+    },[history]
+  )
 
   useEffect(() => {
     const token = query.get('token');

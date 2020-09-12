@@ -9,15 +9,21 @@ const DashboardNavStyle = Styled.div`
   background: #fff;
   text-align: center;
   font-size: 18px;
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
   .nav {
     padding: 120px 0 100px 0;
     margin: 0 auto;
     width: 100%;
     .nav-item {
       margin: 30px auto;
-      padding: 10px 0 10px 20%;
+      padding: 10px 0 10px 20px;
       text-align: left;
       display: block;
+      @media only screen and (max-width: 600px) {
+        padding:10px 0 10px 10px;
+      }
       
       &:hover {
         background: #f7f7f7;
@@ -36,7 +42,10 @@ const DashboardNavStyle = Styled.div`
     width: 100%;
     .footer-item {
       width: 100%;
-      padding: 10px 0 10px 20%;
+      padding: 10px 0 10px 20px;
+      @media only screen and (max-width: 600px) {
+        padding-left: 10px;
+      }
       &:hover {
         background: #FCECEC;
         color: red;

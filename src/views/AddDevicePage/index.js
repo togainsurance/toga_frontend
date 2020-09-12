@@ -1,34 +1,121 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from '../../components/DashboardNav';
 import Select from 'react-select';
+import Creatable from 'react-select/creatable';
 import selectStyle from '../selectStyle';
 import Style from './Style';
+import { deviceValues, deviceTypes } from '../../utils/selectOptions';
+import { addSingleDevice } from '../../utils/requests';
 
 const AddDevicePage = ({ history }) => {
+  const [deviceValue, setDeviceValue] = useState(deviceTypes[0].valueRange);
+  const [deviceBrand, setDeviceBrand] = useState('');
+  const [deviceType, setDeviceType] = useState(deviceTypes[0].name);
+  const [inputField, setInputField] = useState({
+    deviceName: '',
+    deviceOwnerName: '',
+    serialNumber: '',
+    imei: '',
+    purchaseDate: '',
+    purchaseCondition: '',
+    fixedBefore: '',
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleInputFieldChange = (event) => {
+    const { value, name } = event.target;
+    setInputField((state) => ({
+      ...state,
+      [name]: value,
+    }));
+  };
+
+  const handleDeviceTypeChange = (newValue, actionMeta) => {
+    if (actionMeta.action !== 'clear') {
+      setDeviceType(newValue.value);
+    }
+  };
+
+  const handleDeviceBrandChange = (newValue, actionMeta) => {
+    if (actionMeta.action !== 'clear') {
+      setDeviceBrand(newValue.value);
+    }
+  };
+  const handleDeviceValueChange = (newValue, actionMeta) => {
+    if (actionMeta.action !== 'clear') {
+      setDeviceValue(newValue.value);
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const price = deviceValues.find((item) => item.valueRange === deviceValue)
+      .price;
+    const data = {
+      deviceType: deviceType,
+      deviceBrand: deviceBrand,
+      deviceValue: deviceValue,
+      price: `${price}`,
+      ...inputField,
+    };
+    console.log(data);
+    setLoading(true);
+    await addSingleDevice(data);
+    setLoading(false);
+  };
+
+  const type = deviceTypes.find((item) => item.name === deviceType);
 
   return (
     <Style>
       <Nav history={history} />
       <div className='body'>
         <h2>Add Devices</h2>
-        <p>Fill the form below to register a new device.</p>
-        <form>
+        <h4>Fill the form below to register a new device.</h4>
+        <form onSubmit={handleSubmit}>
           <div className='top-select-fields'>
-            <Select
+            <Creatable
+              isClearable
               styles={selectStyle}
+              options={deviceTypes.map((item) => {
+                return {
+                  label: item.name,
+                  value: item.name,
+                };
+              })}
+              onChange={handleDeviceTypeChange}
               required
               placeholder='Device Type'
               name='deviceType'
             />
-            <Select
+            <Creatable
+              isClearable
               styles={selectStyle}
+              options={
+                type
+                  ? type.brands.map((item) => {
+                      return {
+                        label: item,
+                        value: item,
+                      };
+                    })
+                  : ''
+              }
+              onChange={handleDeviceBrandChange}
               required
               placeholder='Device Brand'
               name='deviceBrand'
             />
             <Select
               styles={selectStyle}
-              required
+              options={deviceValues.map((item) => {
+                return {
+                  value: item.valueRange,
+                  label: item.valueRange,
+                };
+              })}
+              isOptionSelected
+              onChange={handleDeviceValueChange}
               placeholder='Device Value'
               name='deviceValue'
             />
@@ -43,8 +130,8 @@ const AddDevicePage = ({ history }) => {
                   placeholder='Name of the device owner'
                   required
                   name='deviceOwnerName'
-                  // value={state.confirmPassword}
-                  // onChange={handleChange}
+                  value={inputField.deviceOwnerName}
+                  onChange={handleInputFieldChange}
                 />
               </label>
               <label className='input-container' htmlFor='deviceName'>
@@ -55,8 +142,8 @@ const AddDevicePage = ({ history }) => {
                   placeholder='Name of device'
                   required
                   name='deviceName'
-                  // value={state.confirmPassword}
-                  // onChange={handleChange}
+                  value={inputField.deviceName}
+                  onChange={handleInputFieldChange}
                 />
               </label>
             </div>
@@ -68,37 +155,53 @@ const AddDevicePage = ({ history }) => {
                   type='text'
                   required
                   name='serialNumber'
-                  // value={state.confirmPassword}
-                  // onChange={handleChange}
+                  value={inputField.serialNumber}
+                  onChange={handleInputFieldChange}
                 />
               </label>
-              <label className='input-container' htmlFor='imeiNumber'>
+              <label className='input-container' htmlFor='imei'>
                 <span>IMEI: </span>
                 <input
                   id='imei-number'
                   type='text'
                   required
-                  name='imeiNumber'
-                  // value={state.confirmPassword}
-                  // onChange={handleChange}
+                  name='imei'
+                  value={inputField.imei}
+                  onChange={handleInputFieldChange}
                 />
               </label>
             </div>
           </div>
-          <div className='bottom-section'>
+          <div className='form-bottom-section'>
             <label htmlFor='purchaseDate'>
               <span>Date of purchase</span>
-              <input type='date' />
+              <input
+                type='date'
+                name='purchaseDate'
+                onChange={handleInputFieldChange}
+              />
             </label>
             <div className='radio-input-container'>
               <p>Has it been fixed before?</p>
               <label htmlFor='yes'>
                 <span>Yes</span>
-                <input type='radio' value='yes' name='fixedBefore' id='yes' />
+                <input
+                  type='radio'
+                  value='true'
+                  name='fixedBefore'
+                  id='yes'
+                  onChange={handleInputFieldChange}
+                />
               </label>
               <label htmlFor='no'>
                 <span>No</span>
-                <input type='radio' value='yes' id='no' name='fixedBefore' />
+                <input
+                  type='radio'
+                  value='false'
+                  id='no'
+                  name='fixedBefore'
+                  onChange={handleInputFieldChange}
+                />
               </label>
             </div>
             <div className='radio-input-container'>
@@ -110,20 +213,24 @@ const AddDevicePage = ({ history }) => {
                   value='new'
                   name='purchaseCondition'
                   id='new'
+                  onChange={handleInputFieldChange}
                 />
               </label>
               <label htmlFor='old'>
                 <span>Old</span>
                 <input
                   type='radio'
-                  value='yes'
+                  value='old'
                   id='old'
                   name='purchaseCondition'
+                  onChange={handleInputFieldChange}
                 />
               </label>
             </div>
           </div>
-          <button className='btn'>Submit</button>
+          <button className='btn' disabled={loading}>
+            Submit{loading ? 'ing' : ''}
+          </button>
         </form>
       </div>
     </Style>

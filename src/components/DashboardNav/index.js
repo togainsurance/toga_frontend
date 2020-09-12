@@ -28,7 +28,7 @@ const DashboardNav = ({ logout, history }) => {
         <li>
           <NavLink
             className='nav-item'
-            to='/not-available'
+            to='/coming-soon/1'
             activeClassName='active'
           >
             request claim
@@ -37,7 +37,7 @@ const DashboardNav = ({ logout, history }) => {
         <li>
           <NavLink
             className='nav-item'
-            to='/not-available'
+            to='/coming-soon/2'
             activeClassName='active'
           >
             Request Service
@@ -46,7 +46,7 @@ const DashboardNav = ({ logout, history }) => {
         <li>
           <NavLink
             className='nav-item'
-            to='/not-available'
+            to='/coming-soon/3'
             activeClassName='active'
           >
             view devices

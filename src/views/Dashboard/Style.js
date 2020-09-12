@@ -3,16 +3,28 @@ import Styled from 'styled-components';
 const StyledDashbord = Styled.div`
   display: grid;
   height: 100vh;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 20% auto;
   background: #F7F7F7;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 25% auto;
+  }
+  
   .body{
     width: 90%;
     margin: 130px auto 0 auto;
+    @media only screen and (max-width: 600px) {
+      margin: 90px auto 0 auto;
+      font-size: 12px;
+    }
     .bulk-user {
       display: grid;
       grid-template-columns: 1fr 30%;
       grid-gap: 20px;
       text-align: center;
+      @media only screen and (max-width: 600px) {
+        grid-template-columns: auto;
+        grid-gap: 5px;
+      }
       input[type="file"] {
         display: none;
       }label {
@@ -29,25 +41,42 @@ const StyledDashbord = Styled.div`
         border-radius: 9px;
         font-size: 2em;
         text-align: center;
+        @media only screen and (max-width: 600px) {
+          font-size: 1.4em;
+        }
       }
       .btn {
         max-height: 50%;
         border-radius: 9px;
         font-size: 2em;
+        @media only screen and (max-width: 600px) {
+          max-height: 100%;
+          font-size: 1.4em;
+        }
       }
     }
     .add-device-btn {
       width: 50%;
+      background: white;
+      color: #6b1587;
+      border-color: #6b1587;
       display: block;
       margin: 20px auto;
       font-size: 1.8em;
       text-align: center;
+      @media only screen and (max-width: 600px) {
+        font-size: 1.2em;
+        width: 80%;
+      }
     }
     .analytics {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 30px;
       margin: 40px auto;
+      @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
       .analytics-card {
         border: 2px solid #6b1587;
         padding: 5px;

@@ -25,6 +25,11 @@ const EmailReset = ({ history }) => {
       })
       .catch((error) => {
         setLoading(false);
+
+        if (error.message === 'Network Error') {
+          return toast.error('Something went wrong. Please try Again');
+        }
+        
         toast.error(error.response.data.error + ' with us');
       });
   };

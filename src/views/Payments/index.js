@@ -1,215 +1,79 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { PaystackButton } from 'react-paystack';
+import { connect } from 'react-redux';
 import StylePayments from './Style';
 import Nav from '../../components/DashboardNav';
+import Payment from '../../components/Payment';
+import { fetchPendingPayments } from '../../utils/requests';
+import { calculateTotalPrice } from '../../utils/helper';
 
-const Payments = () => {
+const Payments = ({ auth }) => {
+  const [pendingDevices, setPendingDevices] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  useEffect(() => {
+    fetchPendingPayments().then((initialValue) => {
+      if (!initialValue) {
+        setError('Unable to fetch Devices');
+        return;
+      }
+      if (initialValue.length < 1) {
+        setError('You do not have Pending devices');
+      }
+      setPendingDevices(initialValue);
+      setLoading(false);
+    });
+  }, []);
+
+  const handlePayment = (res) => {
+    console.log(res);
+  };
+
+  console.log(calculateTotalPrice(pendingDevices));
+
   return (
     <StylePayments>
       <Nav />
+
       <div className='body'>
         <div className='payment-header'>
           <p>Approved</p>
           <p className='active'>Pending</p>
           <p>Canceled</p>
         </div>
-        <button className='btn pay-all-btn'>Pay all</button>
-        <div className='device-info-box-container'>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
+        {error || !auth.user ? (
+          <div className='body'>{error && 'Loading...'}</div>
+        ) : (
+          <div>
+            <PaystackButton
+              className='btn pay-all-btn'
+              text='Pay all'
+              reference={new Date().getTime()}
+              onSuccess={handlePayment}
+              email={auth.user.email}
+              amount={calculateTotalPrice(pendingDevices) * 100}
+              label={`pay for all pending devices`}
+              publicKey='pk_test_cfc00971a4b643f9b66a5c090bc8c6f2f911c268'
+              logo='https://res.cloudinary.com/toga-insure/image/upload/v1589798290/CommingSoonPage/TogaLogo_2x_xhi9a1.png'
+            />
+            <div className='device-info-box-container'>
+              {loading ? (
+                <h1>Loding...</h1>
+              ) : (
+                pendingDevices.map((device) => (
+                  <Payment key={device.deviceId} auth={auth} {...device} />
+                ))
+              )}
             </div>
           </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-          <div className='device-info-box'>
-            <div className='name'>
-              <div className='device-type'>Computer</div>
-              <hr />
-              <div className='device-model'>Hp pavilon</div>
-            </div>
-            <div className='number-details'>
-              <p>
-                <span className='info-tag'>Serial Number: </span>
-                0564103256
-              </p>
-              <p>
-                <span className='info-tag'>IMEI Number: </span>
-                87984651315460
-              </p>
-              <p>
-                <span className='info-tag'>Value Range: </span>0 - 40,000
-              </p>
-            </div>
-            <div className='cta-container'>
-              <button className='btn'>Pay Now</button>
-              <button className='btn danger'>Remove Device</button>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </StylePayments>
   );
 };
 
-export default Payments;
+const mapStateToProps = (state) => ({
+  auth: state.user,
+});
+
+export default connect(mapStateToProps, {})(Payments);

@@ -9,11 +9,25 @@ const StyledHeader = Styled.header`
   width: 100%;
   transition: background 0.5s;
   min-height: 10%;
+  min-width: 100%;
   z-index: 999;
 
   .companyName {
     text-transform: uppercase;
     font-size: 24px;
+    @media only screen and (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  .second-header {
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
 .header {
@@ -42,7 +56,7 @@ const StyledHeader = Styled.header`
 
 @media only screen and (max-width: 756px) {
   .header {
-    width: 95%;
+    width: 90%;
   }
   .header-items {
     min-width: 100%;

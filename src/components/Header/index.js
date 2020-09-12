@@ -24,11 +24,14 @@ const Header = ({ user }) => {
   };
   return (
     <StyledHeader id='header-container' className='header-container'>
-      <div className='header'>
-        <Logo />
-        {user.isAuthenticated ? (
+      {user.isAuthenticated ? (
+        <div className='second-header'>
+          <Logo />
           <p className='companyName'>{user.user.name}</p>
-        ) : (
+        </div>
+      ) : (
+        <div className='header'>
+          <Logo />
           <div>
             <ul className='header-items'>
               <li className='header-item desktop-only'>
@@ -77,8 +80,8 @@ const Header = ({ user }) => {
               </li>
             </ul>
           </div>
-        )}
-      </div>
+        </div>
+      )}
       <Nav
         open={isOpen}
         onClick={(e) => {

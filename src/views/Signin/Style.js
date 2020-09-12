@@ -4,6 +4,9 @@ const SignUpStyle = Styled.section`
   width: 90%;
   margin: 150px auto;
   text-align: center;
+  @media only screen and (max-width: 600px) {
+      margin: 100px auto;
+  }
   h2 {
     font-size: 24px;
   }
@@ -18,6 +21,9 @@ const SignUpStyle = Styled.section`
   form {
     width: 40%;
     margin: 30px auto;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+    }
     .input-container {
       width: 100%;
       display: flex;

@@ -26,6 +26,7 @@ const Logo = Styled.div`
     font-size: 24px;
     line-height: 30px;
     .logo-text {
+      display: none;
       bottom: 8%;
     }
 

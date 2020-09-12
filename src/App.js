@@ -23,18 +23,19 @@ import PasswordReset from './views/PasswordReset';
 import Dashboard from './views/Dashboard';
 import AddDevicePage from './views/AddDevicePage';
 import Payments from './views/Payments';
+import ScrollToTheTop from './components/ScrollToTheTop';
+import Auth from './views/Auth';
+import NotAvailableDashboard from './views/NotAvailableDashboard';
 
 const App = () => {
   return (
     <Router>
       <Route component={Header} />
+      <ScrollToTheTop />
       <ToastContainer transition={Slide} position='top-center' />
       <Switch>
         <Route path='/' exact component={HomePage} />
         <Route path='/device' component={DeviceInsurancePage} />
-        <Route path='/dashboard/add-device' component={AddDevicePage} />
-        <Route path='/dashboard' component={Dashboard} />
-        <Route path='/payments' component={Payments} />
         <Route path='/signin' component={Signin} />
         <Route path='/signup' component={Signup} />
         <Route path='/verify' component={VerificationPage} />
@@ -52,6 +53,12 @@ const App = () => {
         <Route path='/basic-life' component={LifeInsurancePage} />
         <Route path='/referral' component={ReferralPage} />
         <Route path='/not-available' component={ComingSoonPage} />
+        <Route path='/coming-soon/:id' component={NotAvailableDashboard} />
+        <Auth>
+          <Route path='/add-device' component={AddDevicePage} />
+          <Route path='/dashboard' component={Dashboard} />
+          <Route path='/payments' component={Payments} />
+        </Auth>
       </Switch>
       <Route component={Footer} />
     </Router>

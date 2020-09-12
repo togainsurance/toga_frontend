@@ -45,9 +45,6 @@ const FooterStyle = Styled.footer`
   padding: 10px;
   @media only screen and (max-width: 856px) {
     margin: 0 auto 0 auto;
-    .footer-logo {
-      margin-left: -50px;
-    }
   }
 }
 
@@ -90,6 +87,9 @@ const FooterStyle = Styled.footer`
 
 .footer-top__left__bottom input{
   border-radius: 13px 0 0 13px;
+  @media only screen and (max-width: 856px) {
+    border-radius: 8px;
+  }
 }
 .footer-top__left .msg-body,
 .footer-top__left__bottom input,
@@ -99,6 +99,7 @@ const FooterStyle = Styled.footer`
     width: 90%;
     display: block;
     margin: 10px auto;
+
   }
 }
 
@@ -106,7 +107,7 @@ const FooterStyle = Styled.footer`
     border-radius: 0 13px 13px 0;
   @media only screen and (max-width: 856px) {
     width: 90%;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
   }
 }
 
